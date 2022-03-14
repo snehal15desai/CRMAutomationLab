@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Free CRM TestAutomation">
+
+    <listeners>
+        <listener class-name="ExtentReportListner.ExtentReportListner" />
+    </listeners>
+
+
+    <parameter name="browserType" value="chrome" />
+    <parameter name="appURL" value="https://google.com" />
+
+
+
+    <test verbose="2" preserve-order="true" name="/Users/snehal/IdeaProjects/FreeCRMTestAutomation">
+        <classes>
+            <class name="com.crm.qa.testcases.LoginPageTest">
+                <methods>
+                    <include name="loginPageTitleTest"/>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+            <class name="com.crm.qa.testcases.HomePageTest">
+                <methods>
+                    <include name="verifyHomePageTitleTest"/>
+                    <include name="verifyUserNameLabelTest"/>
+                    <include name="clickOnContactsTest"/>
+                    <include name="clickOnDealsPageTest"/>
+                    <include name="clickOnTasksPageTest"/>
+                </methods>
+            </class>
+            <class name="com.crm.qa.testcases.ContactPageTest">
+                <methods>
+                    <include name="contactsPageLabelTest"/>
+                    <include name="selectContactsTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
